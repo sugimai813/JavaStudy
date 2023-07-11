@@ -1,0 +1,92 @@
+body{
+    width: 400px;
+    height: 450px;
+}
+
+
+.header{
+    background-color: #141f40;
+    padding: 0;
+    height: 100px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.content{
+    width: 160px;
+    height: 60px;
+    display: flex;
+    background-color: white;
+    border: none;
+    margin: 20px 20px 20px 220px;
+}
+
+.wine{
+    background-color: #a9004b;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: auto;
+}
+
+.box{
+    height: 250px;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+.box::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.green{
+    float: left;
+    background-color: #80bfa8;
+    width: 150px;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+}
+
+.red{
+    float: right;
+    background-color: #8c2727;
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+}
+
+.orange{
+    width: 150px;
+    height: 50px;
+    background-color: #ff863f;
+    box-sizing: border-box;
+    border: solid 5px #FFF;
+    margin-left: 40px;
+    margin-right: 60px;
+}
+
+.orange:first-child{
+    margin-top: 40px;
+}
+
+.orange:last-child{
+    margin-bottom: 40px;
+}
+
+.orange:nth-child(2){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer{
+    height: 100px;
+    width: 400px;
+    background-color: #d98d30;
+    clear: both;
+}
+
