@@ -12,6 +12,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dto.UserRequest;
 import com.example.demo.dto.UserUpdateRequest;
@@ -60,7 +62,7 @@ public class UserController {
   * @param model Model
   * @return ユーザー情報一覧画面
   */
- @GetMapping("/user/create")
+ @PostMapping("/user/create")
  public String create(@Validated @ModelAttribute UserRequest userRequest, BindingResult result, Model model) {
   if (result.hasErrors()) {
    // 入力チェックエラーの場合
@@ -111,7 +113,7 @@ public class UserController {
   * @param model Model
   * @return ユーザー情報詳細画面
   */
- @GetMapping("/user/update")
+ @RequestMapping("/user/update")
  public String update(@Validated @ModelAttribute UserUpdateRequest userUpdateRequest, BindingResult result, Model model) {
   if (result.hasErrors()) {
    List<String> errorList = new ArrayList<String>();
